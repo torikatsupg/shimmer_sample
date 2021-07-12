@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer_sample/movie_placeholder.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: Scaffold(
+          body: SafeArea(
+        child: Column(
+          children: [
+            MoviePlaceholder(),
+          ],
+        ),
+      )),
     );
   }
 }
