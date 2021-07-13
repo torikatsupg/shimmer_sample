@@ -1,16 +1,35 @@
 # shimmer_sample
 
-A new Flutter project.
+This is a sample of Shimmer Effect!
+
+<img src="./docs/vertical_shimmer.gif" height=400>
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```sh
+# 1. move directory
+cd /path/to/shimmer_sample
 
-A few resources to get you started if this is your first Flutter project:
+# 2. get dependencies
+flutter pub get
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# 3. run app
+flutter run
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## What is "Shimmer"?
+"Shimmer" is effect of chrome color with shimmer.
+
+see more detail
+https://flutter.dev/docs/cookbook/effects/shimmer-loading
+
+## How to implemnt Shimmer?
+The implemtentations procedure is as follows
+
+1. create skeleton of UI.
+2. add gradient effect.
+3. add animation.
+
+see more detail
+- [my blog](http://)
+- [flutter cookbook](https://flutter.dev/docs/cookbook/effects/shimmer-loading)
