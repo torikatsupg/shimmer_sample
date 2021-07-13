@@ -49,3 +49,13 @@ class Shimmer extends StatelessWidget {
     );
   }
 }
+
+class _SlidingGradientTransform extends GradientTransform {
+  const _SlidingGradientTransform(this.slidePercent);
+
+  final double slidePercent;
+
+    @override
+  Matrix4? transform(Rect bounds, {TextDirection? textDirection}) =>
+    Matrix4.translationValues(bounds.width * slidePercent, 0, 0);
+}
