@@ -33,12 +33,14 @@ class Shimmer extends StatelessWidget {
       shaderCallback: (bounds) {
         final gradient = LinearGradient(
           colors: [
-            Colors.black,
-            Colors.white,
+            Color(0xFFEBEBF4),
+            Color(0xFFF4F4F4),
+            Color(0xFFEBEBF4),
           ],
           stops: [
-            0.5,
-            0.51,
+            0.1,
+            0.3,
+            0.4,
           ],
         );
         return gradient.createShader(shimmerRect);
