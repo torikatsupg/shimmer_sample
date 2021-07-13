@@ -1,9 +1,33 @@
 import 'package:flutter/material.dart';
 
-class Shimmer extends StatelessWidget {
+class Shimmer extends StatefulWidget {
   const Shimmer({required this.child, Key? key}) : super(key: key);
 
   final Widget child;
+  @override
+  _ShimmerState createState() => _ShimmerState();
+}
+
+class _ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    // controllerを初期化する
+    _controller = AnimationController.unbounded(vsync: this)
+      ..repeat(min: -0.5, max: 1.5, period: const Duration(milliseconds: 1500))
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
+  @override
+  void dispose() {
+    // controllerをdisposeする
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +70,7 @@ class Shimmer extends StatelessWidget {
         );
         return gradient.createShader(shimmerRect);
       },
-      child: child,
+      child: widget.child,
     );
   }
 }
