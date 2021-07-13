@@ -2,7 +2,7 @@
 
 This is a sample of Shimmer Effect!
 
-<img src="./docs/vertical_shimmer.gif" height=400>
+<img src="./docs/tilt_shimmer.gif" height=400>
 
 ## Getting Started
 
