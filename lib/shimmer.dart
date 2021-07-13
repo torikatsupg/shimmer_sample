@@ -42,6 +42,7 @@ class Shimmer extends StatelessWidget {
             0.3,
             0.4,
           ],
+          transform: _SlidingGradientTransform(0.4),
         );
         return gradient.createShader(shimmerRect);
       },
@@ -55,7 +56,7 @@ class _SlidingGradientTransform extends GradientTransform {
 
   final double slidePercent;
 
-    @override
+  @override
   Matrix4? transform(Rect bounds, {TextDirection? textDirection}) =>
-    Matrix4.translationValues(bounds.width * slidePercent, 0, 0);
+      Matrix4.translationValues(bounds.width * slidePercent, 0, 0);
 }
