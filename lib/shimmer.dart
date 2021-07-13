@@ -66,7 +66,10 @@ class _ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
             0.3,
             0.4,
           ],
-          transform: _SlidingGradientTransform(0.4),
+          transform: _SlidingGradientTransform(_controller.value),
+          begin: Alignment(-1, -0.3),
+          end: Alignment(1, 0.3),
+          tileMode: TileMode.clamp,
         );
         return gradient.createShader(shimmerRect);
       },
